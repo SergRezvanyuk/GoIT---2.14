@@ -15,6 +15,11 @@ Base = declarative_base()
 
 
 def get_db():
+    """
+    Retrieve a database session.
+
+    :yield: Database session
+    """
     db = SessionLocal()
     try:
         yield db
